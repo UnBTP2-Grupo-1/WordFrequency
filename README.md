@@ -18,6 +18,7 @@ This program was created for the course "Computer Program Skills 2" (Prof. Rodri
 ### 🎲 Run the program
 ```Powershell
 g++ .\main.cpp .\src\aux_functions.cpp .\header\aux_functions.hpp
+.\a.exe <path> # For example: .\a.exe text.txt
 ```
 
 <br>
