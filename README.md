@@ -23,8 +23,8 @@ g++ .\main.cpp .\src\aux_functions.cpp .\header\aux_functions.hpp
 <br>
 
 ## 👨‍💻 Authors
-- Davi Matheus Garcia Pedroza
-- Gustavo Pereira Chaves
-- Lucas de Moura Pereira
-- Luis Filipe Campos Cardoso (lfcamposcardoso@gmail.com)
-- Matheus Barbosa e Silva
+- Davi Matheus Garcia Pedroza (https://github.com/davimatheusgp)
+- Gustavo Pereira Chaves (https://github.com/gustavo-oo)
+- Lucas de Moura Pereira (https://github.com/0lucasmoura)
+- Luis Filipe Campos Cardoso (https://github.com/luisfcardoso)
+- Matheus Barbosa e Silva (https://github.com/MrBarbs)
