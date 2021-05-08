@@ -15,7 +15,7 @@ This program was created for the course "Computer Program Skills 2" (Prof. Rodri
 ### ☑ Prerequisite
 - Install G++
 
-#### 🎲 Run the program
+### 🎲 Run the program
 ```Powershell
 g++ .\main.cpp .\src\aux_functions.cpp .\header\aux_functions.hpp
 ```
