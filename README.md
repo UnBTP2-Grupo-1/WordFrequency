@@ -6,6 +6,7 @@ This application is implemented with C++ and use Tantrum as the programming styl
 
 This program was created for the course "Computer Program Skills 2" offered by Universidade de Brasília (UnB).
 
+
 ## 🚀 How to run the project
 
 ### Prerequisite
@@ -15,6 +16,7 @@ This program was created for the course "Computer Program Skills 2" offered by U
 ```Powershell
 g++ .\main.cpp .\src\aux_functions.cpp .\header\aux_functions.hpp
 ```
+
 
 ## 🦸 Authors
 - Davi Matheus Garcia Pedroza
