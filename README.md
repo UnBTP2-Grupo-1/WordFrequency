@@ -1,19 +1,11 @@
 # Word Frequency Application
 
-<p align="center">
- <a href="#-about-the-project">About the project</a> •
- <a href="#-how-to-run-the-project">How to run the project</a> • 
- <a href="#-authores">Autores</a> • 
-</p>
-
-
 ## 💻 About the project
 
 This application is implemented with C++ and use Tantrum as the programming style. The user enter a text files's path as an input path and the program show the word frequency's text.
 
 This program was created for the course "Computer Program Skills 2" offered by Universidade de Brasília (UnB).
 
----
 ## 🚀 How to run the project
 
 ### Prerequisite
