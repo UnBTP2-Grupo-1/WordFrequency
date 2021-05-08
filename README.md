@@ -1,6 +1,6 @@
 # Word Frequency Application
 
----
+
 
 ## 💻 About the project
 
