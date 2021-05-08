@@ -1,6 +1,6 @@
 # Word Frequency Application
 
-
+<br>
 
 ## 💻 About the project
 
@@ -8,7 +8,7 @@ This application is implemented with C++ and use Tantrum as the programming styl
 
 This program was created for the course "Computer Program Skills 2" (Prof. Rodrigo Bonifacio de Almeida) offered by Universidade de Brasília (UnB).
 
----
+<br>
 
 ## 🚀 How to run the project
 
@@ -20,7 +20,7 @@ This program was created for the course "Computer Program Skills 2" (Prof. Rodri
 g++ .\main.cpp .\src\aux_functions.cpp .\header\aux_functions.hpp
 ```
 
----
+<br>
 
 ## 🦸 Authors
 - Davi Matheus Garcia Pedroza
