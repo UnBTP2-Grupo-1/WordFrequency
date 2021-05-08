@@ -12,7 +12,7 @@ This program was created for the course "Computer Program Skills 2" (Prof. Rodri
 
 ## 🚀 How to run the project
 
-### Prerequisite
+### ☑ Prerequisite
 - Install G++
 
 #### 🎲 Run the program
@@ -22,7 +22,7 @@ g++ .\main.cpp .\src\aux_functions.cpp .\header\aux_functions.hpp
 
 <br>
 
-## 🦸 Authors
+## 👨‍💻 Authors
 - Davi Matheus Garcia Pedroza
 - Gustavo Pereira Chaves
 - Lucas de Moura Pereira
