@@ -6,7 +6,7 @@
 
 This application is implemented with C++ and use Tantrum as the programming style. The user enter a text files's path as an input path and the program show the word frequency's text.
 
-This program was created for the course "Computer Program Skills 2" offered by Universidade de Brasília (UnB).
+This program was created for the course "Computer Program Skills 2" (Prof. Rodrigo Bonifacio de Almeida) offered by Universidade de Brasília (UnB).
 
 ---
 
