@@ -9,11 +9,13 @@ int main(int argc, char *argv[]) {
     else if (argc > 2)
       throw invalid_argument("Especifique apenas um argumento");
 
-    words = remove_stop_words(extract_words(argv[1]));
+    words = extract_words(argv[1]);
+    //words = remove_stop_words(extract_words(argv[1]));
     
     print_vector(words);
     
   } 
+  
   catch (const invalid_argument& exception) {
     cout << "Erro: " << exception.what() << endl;
   }
