@@ -4,6 +4,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <fstream>
+#include <cctype>
+
 using namespace std;
 
 vector<string> extract_words(string path);

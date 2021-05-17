@@ -1,17 +1,20 @@
 #include "../header/aux_functions.hpp"
-#include <fstream>
 
-string remove_special_character(string s) {
-    for (int i = 0; i < s.size(); i++) {
-      // Finding the character whose ASCII value fall under this range
-      if (s[i] < 'A' || s[i] > 'Z' && s[i] < 'a' || s[i] > 'z') {   
-        // erase function to erase the character
-        s.erase(i, 1); 
-        i--;
-      }
+string remove_special_character(string word) {
+  for (int counter = 0; counter < word.size(); counter++) {
+
+    // Finding the character whose ASCII value fall under this range
+    if (word[counter] < 'A' || word[counter] > 'Z' && word[counter] < 'a' || word[counter] > 'z') {   
+      // erase function to erase the character
+      word.erase(counter, 1); 
+      counter--;
+    } else {
+      word[counter] = tolower(word[counter]);  // lower letter
     }
-    
-    return s;
+
+  }
+
+  return word;
 }
 
 vector<string> extract_words(string path) {
@@ -22,10 +25,11 @@ vector<string> extract_words(string path) {
   input.open(path);
   try {
     if(!input.is_open()) {
-      throw invalid_argument("Arquivo não encotrado no caminho especificado");
+      throw invalid_argument("File not found. Please, specify the correct path.");
     }
     while (input >> element) { 
-      word_list.push_back(remove_special_character(element));
+      string word_temp = remove_special_character(element);
+      if(!word_temp.empty()) word_list.push_back(word_temp);
     }
   }
 
@@ -41,16 +45,16 @@ vector<string> remove_stop_words(vector<string> word_list) {
   
   try {
     if(word_list.empty()) {
-      throw invalid_argument("Word list vazia ou não encontrada");
+      throw invalid_argument("Empty word list or not found");
     }
 
     stop_words = extract_words("./text/stop_words.txt");
     if(stop_words.empty()){
-      throw invalid_argument("Stop words vazia");
+      throw invalid_argument("Empty stop words list");
     }
     
     for (int i = 0; i < stop_words.size(); i++) {
-      //Remover as stop_words da word_list
+      //Remove stop_words drom word_list
     }
 
   }

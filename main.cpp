@@ -5,9 +5,9 @@ int main(int argc, char *argv[]) {
 
   try {
     if (argc == 1)
-      throw invalid_argument("Nenhum argumento especificado");
+      throw invalid_argument("No argument. Please, insert an argument.");
     else if (argc > 2)
-      throw invalid_argument("Especifique apenas um argumento");
+      throw invalid_argument("Specify just one argument.");
 
     words = extract_words(argv[1]);
     //words = remove_stop_words(extract_words(argv[1]));
