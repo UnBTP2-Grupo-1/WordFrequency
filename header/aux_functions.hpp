@@ -6,6 +6,7 @@
 #include <string>
 #include <fstream>
 #include <cctype>
+#include <algorithm>
 
 using namespace std;
 

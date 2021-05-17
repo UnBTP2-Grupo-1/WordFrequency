@@ -42,19 +42,26 @@ vector<string> extract_words(string path) {
 
 vector<string> remove_stop_words(vector<string> word_list) {
   vector <string> stop_words;
+  ifstream input_stop_word("text/stop_words.txt");
+  string element_stop_word;
   
   try {
     if(word_list.empty()) {
       throw invalid_argument("Empty word list or not found");
+    } else {
+      while (getline(input_stop_word, element_stop_word,',')) {
+        if(element_stop_word.size() > 0)
+          stop_words.push_back(element_stop_word);
+      }
     }
 
-    stop_words = extract_words("./text/stop_words.txt");
     if(stop_words.empty()){
       throw invalid_argument("Empty stop words list");
     }
     
-    for (int i = 0; i < stop_words.size(); i++) {
-      //Remove stop_words drom word_list
+    for (int counter = 0; counter < stop_words.size(); counter++) {
+      //Remove stop_words from word_list
+      word_list.erase(remove(word_list.begin(), word_list.end(), stop_words[counter]), word_list.end());
     }
 
   }
