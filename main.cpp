@@ -2,7 +2,7 @@
 
 int main(int argc, char *argv[]) {
   vector <string> words;
-  map<string, int> word_frequencies;
+  vector<pair<string, int>> word_frequencies;
 
   try {
     if (argc == 1)
@@ -11,15 +11,18 @@ int main(int argc, char *argv[]) {
       throw invalid_argument("Specify just one argument.");
 
     words = remove_stop_words(extract_words(argv[1]));
-    word_frequencies = frequencies(words);
+    word_frequencies = sort(frequencies(words));
+
+    if(word_frequencies.size() < 25)
+      throw invalid_argument("Less than 25 words!");
     
     print_vector(words);
-    print_map(word_frequencies);
+    print_vector_pair(word_frequencies);
     
   } 
   
   catch (const invalid_argument& exception) {
-    cout << "Erro: " << exception.what() << endl;
+    cout << "Error: " << exception.what() << endl;
   }
 
   return 0;

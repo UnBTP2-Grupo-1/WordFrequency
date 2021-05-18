@@ -96,24 +96,35 @@ map<string, int> frequencies(vector<string> word_list) {
         throw invalid_argument("Empty word list frequencies or not found");
       } 
     }
-
-    return word_list_frequencies;
   }
 
   catch(const invalid_argument& exception) {
     throw exception;
   }
 
-  //return word_list_frequencies;
+  return word_list_frequencies;
 }
 
-/*vector<string> sort(vector<string> word_freq) {
-  
+vector<pair<string, int>> sort(map<string, int> word_freq) {
+  typedef pair<string, int> pair;
+  vector<pair> vec_temp;
+
   try {
     if(word_freq.empty()) {
-      throw invalid_argument("Empty word list or not found");
+      throw invalid_argument("Empty word frequencies list or not found");
     } else {
+      copy(word_freq.begin(), word_freq.end(), back_inserter<vector<pair>>(vec_temp));
+      if(vec_temp.empty()) {
+        throw invalid_argument("Empty word frequencies list or not found");
+      } else {
+        sort(vec_temp.begin(), vec_temp.end(), [](const pair &l, const pair &r) { 
+          if (l.second != r.second) {
+              return l.second > r.second;
+          }
 
+          return l.first > r.first;
+        });
+      }
     }
 
   }
@@ -122,8 +133,8 @@ map<string, int> frequencies(vector<string> word_list) {
     throw exception;
   }
 
-  return word_freq;
-}*/
+  return vec_temp;
+}
 
 void print_vector(vector<string> vector) {
   for (int i = 0; i < vector.size(); i++){
@@ -145,16 +156,14 @@ vector<string> remove_duplicate(vector<string> v) {
   return v_out;
 }
 
-void print_map(map<string, int> map_element) {
+void print_vector_pair(vector<pair<string, int>> vector) {
 
-  // Printing map
-  map<string, int>::iterator itr;
+  // Printing vector pair
+  cout << endl << "The word frequency is:" << endl << endl;
+  cout << "WORD\t\tFREQUENCY" << endl;
 
-  cout << "\nThe word frequency is: \n";
-  cout << "\tWORD\t\tFREQUENCY\n";
-
-  for (itr = map_element.begin(); itr != map_element.end(); ++itr) {
-      cout << '\t' << itr->first << '\t' << '\t' << itr->second << '\n';
+  for (auto const &pair: vector) {
+    cout << pair.first << '\t' << '\t' << pair.second << endl;
   }
 
   cout << endl;
