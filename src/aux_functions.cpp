@@ -63,7 +63,6 @@ vector<string> remove_stop_words(vector<string> word_list) {
       //Remove stop_words from word_list
       word_list.erase(remove(word_list.begin(), word_list.end(), stop_words[counter]), word_list.end());
     }
-
   }
 
   catch(const invalid_argument& exception) {
@@ -73,7 +72,7 @@ vector<string> remove_stop_words(vector<string> word_list) {
   return word_list;
 }
 
-void frequencies(vector<string> word_list) {
+map<string, int> frequencies(vector<string> word_list) {
   map<string, int> word_list_frequencies;
   vector<string> word_list_uniques;
 
@@ -93,9 +92,12 @@ void frequencies(vector<string> word_list) {
         word_list_frequencies.insert(pair<string, int>(word_list_uniques[counter], freq_counter));
       }
 
-      print_map(word_list_frequencies);
+      if(word_list_frequencies.empty()) {
+        throw invalid_argument("Empty word list frequencies or not found");
+      } 
     }
 
+    return word_list_frequencies;
   }
 
   catch(const invalid_argument& exception) {

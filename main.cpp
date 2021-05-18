@@ -2,6 +2,7 @@
 
 int main(int argc, char *argv[]) {
   vector <string> words;
+  map<string, int> word_frequencies;
 
   try {
     if (argc == 1)
@@ -10,9 +11,10 @@ int main(int argc, char *argv[]) {
       throw invalid_argument("Specify just one argument.");
 
     words = remove_stop_words(extract_words(argv[1]));
-    frequencies(words);
+    word_frequencies = frequencies(words);
     
     print_vector(words);
+    print_map(word_frequencies);
     
   } 
   
