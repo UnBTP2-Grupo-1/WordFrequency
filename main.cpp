@@ -9,8 +9,8 @@ int main(int argc, char *argv[]) {
     else if (argc > 2)
       throw invalid_argument("Specify just one argument.");
 
-    //words = extract_words(argv[1]);
     words = remove_stop_words(extract_words(argv[1]));
+    frequencies(words);
     
     print_vector(words);
     
